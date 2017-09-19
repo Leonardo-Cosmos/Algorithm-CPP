@@ -17,3 +17,13 @@ public:
 	virtual void Sort(int* array, int length) = 0;
 };
 
+class CEmptySortHandler :
+	public CSortHandler
+{
+public:
+	CEmptySortHandler();
+	~CEmptySortHandler();
+
+	void Sort(int* array, int length);
+};
+

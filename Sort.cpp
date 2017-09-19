@@ -2,6 +2,7 @@
 #include "Sort.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 const int ARRAY_LENGTH = 20;
 
@@ -18,9 +19,10 @@ CSortSample::~CSortSample()
 
 void CSortSample::Exec()
 {
-	CSortHandler* sortHandler = new CSortHandler();
+	CSortHandler* sortHandler = new CEmptySortHandler();
 
 	int array[ARRAY_LENGTH];
+	srand((unsigned)time(NULL));
 	for (int i = 0; i < ARRAY_LENGTH; i++) {
 		array[i] = rand();
 	}
@@ -42,5 +44,20 @@ CSortHandler::CSortHandler()
 
 CSortHandler::~CSortHandler()
 {
+}
+
+CEmptySortHandler::CEmptySortHandler()
+{
+
+}
+
+CEmptySortHandler::~CEmptySortHandler()
+{
+
+}
+
+void CEmptySortHandler::Sort(int* array, int length)
+{
+
 }
 
